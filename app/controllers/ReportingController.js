@@ -18,7 +18,7 @@ app.controller('ReportingController', function ($scope, reportingModel)
     $scope.currentPage = pageTo;
   }
 
-  // update list of countries when lenght selector changes
+  // update list of countries when length selector changes
   $scope.$watch('itemsPerPage', function() {
     $scope.numPages = Math.ceil(numCountries/$scope.itemsPerPage);
     // reset paginator

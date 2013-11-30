@@ -22,14 +22,15 @@ app.config(function ($routeProvider)
 });
 
 /*
- * Configure range filter
- * from: http://stackoverflow.com/questions/11873570/angularjs-for-loop-with-numbers-ranges
+ * Custom page range filter
+ * inspired by: http://stackoverflow.com/questions/11873570/angularjs-for-loop-with-numbers-ranges
  */
 app.filter('pageRange', function() {
   return function(input, total) {
-    total = parseInt(total)+1;
-    for (var i=1; i<total; i++)
-      input.push(i);
+    total = parseInt(total);
+    for (var ii=1; ii<=total; ii++) {
+      input.push(ii);
+    }
     return input;
   };
 });
