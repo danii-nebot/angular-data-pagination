@@ -1,9 +1,27 @@
 <div>
 
+  <div id="length-selector">
+      <button ng-repeat="option in itemsPerPageOptions" ng-click="setItemsPerPage(option)">{{ option }}</button>
+  </div>
 
-    <!-- location data table -->
+  <div id="pagination">
+      <button ng-repeat="page in [] | pageRange:numPages" ng-click="goToPage(page)">{{ page }}</button>
+  </div>
 
-    <p>Hello !</p>
-
+  <!-- location data table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Countries</th>
+        <th>Views</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="country in countryList">
+        <td>{{ country.name }}</td>
+        <td>{{ country.views }}</td>
+      </tr>
+    </tbody>
+  </table>
 
 </div>

@@ -4,7 +4,8 @@
 
 function ReportingModel()
 {
-    // Creates and initialize an Array of countries for showing implementation of a data-table (location report data table in this case)
+    // Creates and initialize an Array of countries for showing implementation of a data-table
+    //(location report data table in this case)
     this.countries =
     [
         {name: 'Afghanistan', code: 'AF'},
@@ -99,6 +100,11 @@ function ReportingModel()
     ]
 
     // Add a property 'views' to each element of the countries array using a loop
+    var numCountries = this.countries.length;
+
+    for (var ii=0; ii<numCountries; ii++) {
+      this.countries[ii].views = Math.floor(Math.random() * 9999);
+    }
 
 }
 
