@@ -1,15 +1,16 @@
-<div>
-
-  <div id="length-selector">
-      <button ng-repeat="option in itemsPerPageOptions" ng-click="setItemsPerPage(option)">{{ option }}</button>
+<div class="container">
+  <div class="page-header">
+      <h1>AngularJS Data Pagination <small>assignment</small></h1>
   </div>
 
-  <div id="pagination">
-      <button ng-repeat="page in [] | pageRange:numPages" ng-click="goToPage(page)">{{ page }}</button>
+  <div class="pagination pagination-right">
+    <ul>
+      <li ng-class="{ active: option == itemsPerPage}" ng-repeat="option in itemsPerPageOptions"><a href="" ng-click="setItemsPerPage(option)">{{ option }}</a></li>
+      </ul>
   </div>
 
   <!-- location data table -->
-  <table>
+  <table class="table table-striped table-bordered table-condensed">
     <thead>
       <tr>
         <th>Countries</th>
@@ -23,5 +24,13 @@
       </tr>
     </tbody>
   </table>
+
+  <div class="pagination pagination-centered">
+    <ul>
+      <li ng-class="{ active: page == currentPage}" ng-repeat="page in [] | pageRange:numPages"><a href="" ng-click="goToPage(page)">{{ page }}</a></li>
+    </ul>
+  </div>
+
+  <div class="page-header"></div>
 
 </div>
