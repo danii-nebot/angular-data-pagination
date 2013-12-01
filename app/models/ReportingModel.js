@@ -1,7 +1,3 @@
-
-
-
-
 function ReportingModel()
 {
     // Creates and initialize an Array of countries for showing implementation of a data-table
@@ -107,5 +103,3 @@ function ReportingModel()
     }
 
 }
-
-

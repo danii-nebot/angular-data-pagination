@@ -1,4 +1,3 @@
-
 var app = angular.module( "assignment", [ ] );
 
 /* The factory creates the various models for the application */
@@ -34,5 +33,3 @@ app.filter('pageRange', function() {
     return input;
   };
 });
-
-

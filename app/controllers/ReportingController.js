@@ -1,4 +1,3 @@
-
 app.controller('ReportingController', function ($scope, reportingModel)
 {
   // initial set up
@@ -38,10 +37,3 @@ app.controller('ReportingController', function ($scope, reportingModel)
   }
 
 });
-
-
-
-
-
-
-
